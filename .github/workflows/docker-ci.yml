@@ -29,10 +29,10 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
           
-      - name: Build and push Docker image
-        uses: docker/build-push-action@v3
-        with:
-          context: .
-          dockerfile: ./path/to/Dockerfile
-          push: true
-          tags: fadarya1/test1:latest
+      # - name: Build and push Docker image
+      #   uses: docker/build-push-action@v3
+      #   with:
+      #     context: .
+      #     dockerfile: ./path/to/Dockerfile
+      #     push: true
+      #     tags: fadarya1/test1:latest
