@@ -34,11 +34,11 @@ jobs:
           docker pull fadarya1/test2:latest
 
       - name: Run tests using Docker image
-      #   run: |
-      #     docker run fadarya1/test2:latest
-      # - name: Run tests
         run: |
-          python -m unittest discover -s tests -p "test_*.py"
+          docker run fadarya1/test2:latest
+      # - name: Run tests
+      #   run: |
+      #     python -m unittest discover -s tests -p "test_*.py"
           
       # - name: Build and push Docker image
       #   uses: docker/build-push-action@v3
