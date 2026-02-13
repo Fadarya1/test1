@@ -29,7 +29,14 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
-      - name: Run tests
+      - name: Pull Docker image from Docker Hub
+        run: |
+          docker pull fadarya1/test2:latest
+
+      - name: Run tests using Docker image
+      #   run: |
+      #     docker run fadarya1/test2:latest
+      # - name: Run tests
         run: |
           python -m unittest discover -s tests -p "test_*.py"
           
