@@ -33,5 +33,6 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           context: .
+          dockerfile: ./path/to/Dockerfile
           push: true
           tags: fadarya1/test1:latest
